@@ -1137,26 +1137,136 @@
             </div>
         </div>
     </section>
+<!-- Gallery Filter Buttons Section -->
+<div class="gallery-filters" style="text-align: center; margin-bottom: 30px;">
+    <button class="filter-btn active" onclick="filterGallery('all')" style="padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 4px; border: 1px solid #ccc; background: #fff;">All Photos</button>
+    <button class="filter-btn" onclick="filterGallery('packing')" style="padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 4px; border: 1px solid #ccc; background: #fff;">Packing</button>
+    <button class="filter-btn" onclick="filterGallery('trucks')" style="padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 4px; border: 1px solid #ccc; background: #fff;">Our Trucks</button>
+    <button class="filter-btn" onclick="filterGallery('storage-loading')" style="padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 4px; border: 1px solid #ccc; background: #fff;">Storage & Loading</button>
+</div>
 
-    <!-- ===== GALLERY SECTION ===== -->
-    <section class="gallery" id="gallery" aria-label="Gallery">
-        <div class="container">
-            <div class="section__header">
-                <span class="section__tag">Our Work</span>
-                <h2 class="section__title">Photo <span>Gallery</span></h2>
-                <p class="section__sub">A glimpse of our professional moving services.</p>
-            </div>
-            <div class="gallery__grid" id="galleryGrid">
-                <!-- Images inserted by JS -->
-            </div>
-            <div class="gallery__lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
-                <button class="lightbox__close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
-                <img class="lightbox__img" id="lightboxImg" src="" alt="Enlarged view" />
-            </div>
-        </div>
-    </section>
+<!-- Main Filterable Gallery Grid -->
+<div id="galleryGrid" class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 10px;">
 
-    <!-- ===== REVIEWS SECTION ===== -->
+    <!-- ==================== PACKING CATEGORY ==================== -->
+    <div class="gallery__item" data-category="packing">
+        <img src="images/gallery/blue-fabric-wardrobe.jpg" alt="Wardrobe securely enclosed in thick blue quilted fabric padding" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Premium Fabric Wardrobe Padding</div>
+    </div>
+
+    <div class="gallery__item" data-category="packing">
+        <img src="images/gallery/stacked-cargo-cartons.jpg" alt="Neatly organized and labeled cardboard boxes stacked for relocation" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Heavy-Duty Corrugated Moving Boxes</div>
+    </div>
+
+    <div class="gallery__item" data-category="packing">
+        <img src="images/gallery/dual-wardrobe-wrapping.jpg" alt="Two large wardrobes wrapped in protective fabric sheets and stretch film outdoors" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Secure Double Layer Furniture Wrap</div>
+    </div>
+
+    <div class="gallery__item" data-category="packing">
+        <img src="images/gallery/tall-appliances-stretch.jpg" alt="Tall home appliance safely wrapped in blue sheets and tightly bound with cling film" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Full-Height Appliance Film Wrapping</div>
+    </div>
+
+    <div class="gallery__item" data-category="packing">
+        <img src="images/gallery/brown-paper-wardrobe.jpg" alt="Large wooden home furniture fully encased in thick brown paper wrapping sheet" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Corrugated Sheet Wood Protection</div>
+    </div>
+
+    <div class="gallery__item" data-category="packing">
+        <img src="images/gallery/blue-mattress-cushion.jpg" alt="Heavy duty thick blue mattress protective wrap with secure strap bands" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Shock-Absorbing Mattress Padding</div>
+    </div>
+
+    <div class="gallery__item" data-category="packing">
+        <img src="images/gallery/rolled-carpet-wrapping.jpg" alt="Thick rolled carpet fully sealed inside heavy transparent plastic wrap" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Rolled Carpet Moisture-Proof Seal</div>
+    </div>
+
+    <div class="gallery__item" data-category="packing">
+        <img src="images/gallery/slim-wooden-panel-wrap.jpg" alt="Slim flat wooden door panel safely enclosed in custom brown sheet wrap" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Scratch-Proof Wooden Panel Packing</div>
+    </div>
+
+    <div class="gallery__item" data-category="packing">
+        <img src="images/gallery/sofa-set-bubble-wrap.jpg" alt="Living room sofa set cushioned and securely wrapped with plastic film for shift" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Multi-Layer Living Room Sofa Packing</div>
+    </div>
+
+    <div class="gallery__item" data-category="packing">
+        <img src="images/gallery/bubble-wrapped-armchairs.jpg" alt="Two premium office armchairs cushioned in thick bubble wrap and reinforced with heavy brown tape" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Double-Layer Bubble Wrapped Armchairs</div>
+    </div>
+
+    <div class="gallery__item" data-category="packing">
+        <img src="images/gallery/stretch-wrapped-cabinet.jpg" alt="Tall storage wardrobe cabinet safely packed using stretch wrap for scratch-free relocation" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Clear Film Protected Storage Unit</div>
+    </div>
+
+    <div class="gallery__item" data-category="packing">
+        <img src="images/gallery/blue-quilted-wardrobe.jpg" alt="Large home wardrobe encased in protective blue fabric blankets and tied securely for shipping" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Heavy Blanket Fabric Wardrobe Wrap</div>
+    </div>
+
+
+    <!-- ==================== TRUCKS CATEGORY ==================== -->
+    <div class="gallery__item" data-category="trucks">
+        <img src="images/gallery/jp-packers-orange-truck.jpg" alt="Branded JP Packers and Movers red and white Tata container truck parked on a Mumbai road" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">JP Packers & Movers Tata Ultra Container</div>
+    </div>
+
+    <div class="gallery__item" data-category="trucks">
+        <img src="images/gallery/jp-packers-front-view.jpg" alt="Front profile view of a branded JP Packers and Movers relocation transport truck on an urban street" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Fleet Vehicles Ready for Mumbai Transit</div>
+    </div>
+
+    <div class="gallery__item" data-category="trucks">
+        <img src="images/gallery/jp-packers-fleet-warehouse.jpg" alt="Lineup of different sized branded JP Packers and Movers shipping trucks outside a major warehouse hub" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Complete Commercial Moving Fleet</div>
+    </div>
+
+    <!-- NEW PICTURE (Collage item top-left/bottom-left) -->
+    <div class="gallery__item" data-category="trucks">
+        <img src="images/gallery/jp-packers-tata-ace.jpg" alt="Front macro display of cream colored JP Packers and Movers Tata Ace mini cargo vehicle" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">JP Packers Tata Ace Mini Truck</div>
+    </div>
+
+    <!-- NEW PICTURE (Full side view truck) -->
+    <div class="gallery__item" data-category="trucks">
+        <img src="images/gallery/jp-packers-side-profile.jpg" alt="Side profile of white JP Packers and Movers logistics container truck showcasing safe secure reliable tagline" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Commercial Side Profile Container</div>
+    </div>
+
+
+    <!-- ==================== STORAGE & LOADING CATEGORY ==================== -->
+    <div class="gallery__item" data-category="storage-loading">
+        <img src="images/gallery/white-parcel-bags.jpg" alt="Row of white parcel bags filled with soft goods and sealed for transit" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Waterproof White Cargo Sack Bundles</div>
+    </div>
+
+    <div class="gallery__item" data-category="storage-loading">
+        <img src="images/gallery/pallet-stacked-boxes.jpg" alt="Neatly stacked cardboard boxes on a wooden pallet bound with professional stretch wrap film" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Palletized & Securely Wrapped Cargo</div>
+    </div>
+
+    <div class="gallery__item" data-category="storage-loading">
+        <img src="images/gallery/vertical-furniture-pallet.jpg" alt="Tall furniture piece vertically placed on a warehouse pallet and sealed tightly with clear plastic" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Heavy-Duty Vertical Furniture Storage</div>
+    </div>
+
+    <div class="gallery__item" data-category="storage-loading">
+        <img src="images/gallery/truck-loaded-cargo.jpg" alt="Optimized storage inside a relocation truck featuring household goods packed in blue sheets and tied down" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Secured Blue Fabric Goods Inside Truck</div>
+    </div>
+
+    <div class="gallery__item" data-category="storage-loading">
+        <img src="images/gallery/jp-packers-crew-loading.jpg" alt="Uniformed JP Packers team members wearing purple shirts carefully lifting a cardboard box marked Mumbai Household Goods" class="gallery__img-thumb" onclick="openLightbox(this.src)" style="width:100%; height:220px; object-fit:cover; border-radius:6px; display:block;" />
+        <div class="gallery__caption" style="padding: 10px 0; font-weight: bold; font-size: 14px;">Professional Crew Handling Mumbai Goods</div>
+    </div>
+
+</div>
+   <!-- ===== REVIEWS SECTION ===== -->
     <section class="reviews" id="reviews" aria-label="Customer reviews">
         <div class="container">
             <div class="section__header">
