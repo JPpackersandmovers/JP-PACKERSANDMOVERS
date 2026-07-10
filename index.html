@@ -1747,33 +1747,7 @@
             });
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') lightbox.classList.remove('open');
-            });
-        })();
-    
-
-        <script>
-        // ==================== MAP.JS (Google Maps placeholder) ====================
-        // This will be called by Google Maps API
-        window.initMap = function() {
-            // You can add your Google Maps key and logic here.
-            // For now, we'll just show a static message.
-            const mapDiv = document.getElementById('map');
-            if (mapDiv) {
-                mapDiv.innerHTML = '<div style="display:flex;justify-content:center;align-items:center;height:100%;background:#eef2f6;color:#555;font-weight:500;border-radius:20px;">Map will appear here. Replace YOUR_API_KEY.</div>';
-            }
-            const contactMap = document.getElementById('contactMap');
-            if (contactMap) {
-                contactMap.innerHTML = '<div style="display:flex;justify-content:center;align-items:center;height:100%;background:#eef2f6;color:#555;font-weight:500;border-radius:20px;">Location map placeholder. Replace YOUR_API_KEY.</div>';
-            }
-            // If you have a valid key, you can implement the actual map here.
-        };
-        // If Google Maps doesn't load, this will be called.
-        window.gm_authFailure = function() {
-            console.warn('Google Maps authentication failed. Check your API key.');
-        };
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap" async defer></script>
-<script>
+           <script>
 function filterGallery(category) {
     // 1. Get all the category filter buttons
     const buttons = document.querySelectorAll('.filter-btn');
@@ -1825,5 +1799,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 </script>
+
+    
 </body>
 </html>
