@@ -1749,9 +1749,9 @@
                 if (e.key === 'Escape') lightbox.classList.remove('open');
             });
         })();
-    </script>
+    
 
-    <script>
+        <script>
         // ==================== MAP.JS (Google Maps placeholder) ====================
         // This will be called by Google Maps API
         window.initMap = function() {
@@ -1773,6 +1773,57 @@
         };
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap" async defer></script>
+<script>
+function filterGallery(category) {
+    // 1. Get all the category filter buttons
+    const buttons = document.querySelectorAll('.filter-btn');
+    
+    // 2. Remove the active styling from all buttons and add it to the clicked one
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+        btn.style.background = '#fff';
+        btn.style.color = '#333';
+    });
+    
+    // Highlight the active clicked button (Custom styling example)
+    const activeBtn = event.currentTarget || event.target;
+    if (activeBtn) {
+        activeBtn.classList.add('active');
+        activeBtn.style.background = '#f60'; // Changes color to your theme color when active
+        activeBtn.style.color = '#fff';
+    }
 
+    // 3. Select all your gallery items
+    const items = document.querySelectorAll('.gallery__item');
+    
+    // 4. Loop through every image item to show or hide it
+    items.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        
+        if (category === 'all' || itemCategory === category) {
+            // Show the item smoothly
+            item.style.display = 'block';
+            setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'scale(1)';
+            }, 10);
+        } else {
+            // Hide the item
+            item.style.display = 'none';
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.8)';
+        }
+    });
+}
+
+// Optional: Ensure "All Photos" button looks active when the page first loads
+document.addEventListener("DOMContentLoaded", () => {
+    const allBtn = document.querySelector(".filter-btn");
+    if (allBtn) {
+        allBtn.style.background = '#f60';
+        allBtn.style.color = '#fff';
+    }
+});
+</script>
 </body>
 </html>
